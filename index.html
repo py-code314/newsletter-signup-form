@@ -14,18 +14,20 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
 
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
 
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-
     <main>
-
       <h1 class="sr-only">Newsletter Sign-up Form</h1>
 
       <section class="card">
-
         <picture class="card__img-container">
           <source
             srcset="./assets/images/illustration-sign-up-mobile.svg"
@@ -41,13 +43,12 @@
         <!-- Sign-up form start -->
 
         <div class="card__body">
-
           <h2 class="card__title">Stay updated!</h2>
 
           <p class="card__description">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
-          
+
           <ul class="card__list">
             <li class="card__list-item">
               Product discovery and building what matters
@@ -59,11 +60,10 @@
           </ul>
 
           <form id="card__form" action="">
-
             <div class="card__form-group">
-
               <label class="card__label" for="email"
-                ><strong>Email address</strong></label>
+                ><strong>Email address</strong></label
+              >
 
               <div class="card__error-container">
                 <p class="card__error">Valid email required</p>
@@ -73,22 +73,22 @@
                 class="card__input"
                 id="email"
                 placeholder="email@company.com" />
-
             </div>
 
-            <button class="card__btn btn btn--active">Subscribe to monthly newsletter</button>
-
+            <button class="card__btn btn btn--active">
+              Subscribe to monthly newsletter
+            </button>
           </form>
-
         </div>
-
       </section>
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
       <section class="card__success">
-
-        <img class="card__success-img" src="./assets/images/icon-success.svg" alt="" />
+        <img
+          class="card__success-img"
+          src="./assets/images/icon-success.svg"
+          alt="" />
 
         <h2 class="card__title">Thanks for subscribing!</h2>
 
@@ -98,8 +98,9 @@
           button inside to confirm your subscription.
         </p>
 
-        <button class="card__success-btn btn btn--active">Dismiss message</button>
-        
+        <button class="card__success-btn btn btn--active">
+          Dismiss message
+        </button>
       </section>
     </main>
 
