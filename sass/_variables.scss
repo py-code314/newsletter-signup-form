@@ -4,7 +4,7 @@ $clr-tomato: hsl(4, 100%, 67%);
 $clr-dark-slate-grey: hsl(234, 29%, 20%);
 $clr-charcoal-grey: hsl(235, 18%, 26%);
 $clr-grey: hsl(231, 7%, 60%);
-$white: hsl(0, 0%, 100%);
+$clr-white: hsl(0, 0%, 100%);
 
 $ff-roboto: "Roboto", serif;
 
@@ -15,11 +15,17 @@ $fs-400: pxToRem(16);
 $fs-500: pxToRem(18);
 $fs-600: pxToRem(20);
 $fs-700: pxToRem(24);
+$fs-1050: pxToRem(38);
 
 
 $fw-normal: 400;
 $fw-bold: 700;
 
+$width-card-mobile: pxToRem(375);
+
+
+$space-80: pxToRem(8);
+$space-100: pxToRem(10);
 $space-200: pxToRem(12);
 $space-300: pxToRem(14);
 $space-400: pxToRem(16);
@@ -27,6 +33,8 @@ $space-450: pxToRem(17);
 $space-500: pxToRem(18);
 $space-600: pxToRem(20);
 $space-650: pxToRem(22);
+$space-700: pxToRem(24);
 $space-800: pxToRem(28);
 $space-850: pxToRem(30);
 $space-900: pxToRem(32);
+$space-1100: pxToRem(40);

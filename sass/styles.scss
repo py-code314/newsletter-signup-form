@@ -1,0 +1,102 @@
+
+@use 'mixins' as *;
+@use 'reset' as *;
+@use 'variables' as *;
+
+
+body {
+  @include flex;
+
+  font-family: $ff-roboto;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+.card {
+  max-width: $width-card-mobile;
+}
+
+
+.card__body {
+  padding: $space-900 $space-700;
+}
+
+
+.card__title {
+  font-size: $fs-1050;
+  letter-spacing: 0.9px;
+}
+
+
+.card__description {
+  margin-block-start: $space-300;
+}
+
+
+.card__list {
+  margin-block: $space-700 $space-1100;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-100;
+  
+}
+
+
+
+.card__list-item::before {
+  content: url('../assets/images/icon-list.svg');
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin-inline-end: $space-300;
+}
+
+.card__list-item {
+  display: flex;
+}
+
+
+.card__label,
+.card__input,
+.card__btn {
+  display: block;
+  width: 100%;
+}
+
+
+.card__label {
+  font-size: $fs-200;
+  margin-block-end: $space-80;
+}
+
+
+.card__input {
+  padding: $space-300 $space-650;
+  border-radius: 7px;
+  margin-block-end: $space-700;
+}
+
+
+.btn {
+  color: $clr-white;
+  font-weight: $fw-bold;
+  background: $clr-dark-slate-grey;
+  padding: $space-400;
+  border: transparent;
+  border-radius: 7px;
+}
+
+

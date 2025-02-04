@@ -30,14 +30,14 @@
       <section class="card">
         <picture class="card__img-container">
           <source
-            srcset="./assets/images/illustration-sign-up-mobile.svg"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
             media="(min-width: 48em)" />
           <img
             class="card__img"
             src="./assets/images/illustration-sign-up-mobile.svg"
             alt="Minimalist UI design showing browser window with analytics graph and circular progress indicator displaying 94"
-            width=""
-            height="" />
+            width="375"
+            height="285" />
         </picture>
 
         <!-- Sign-up form start -->
@@ -91,7 +91,7 @@
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <modal id="success-dialog" class="card__success" aria-label="Success Message">
+      <dialog id="success-dialog" class="card__success" aria-label="Success Message">
 
         <img
           class="card__success-img"
@@ -109,7 +109,7 @@
         <button id="success-btn" class="card__success-btn btn btn--active" type="button" aria-labelledby="success-btn">
           Dismiss message
         </button>
-      </modal>
+      </dialog>
     </main>
 
     <!-- Success message end -->
