@@ -31,10 +31,13 @@ body {
 
 .card__body {
   padding: $space-900 $space-700;
+  color: $clr-dark-slate-grey;
+
 }
 
 
 .card__title {
+  // color: $clr-dark-slate-grey;
   font-size: $fs-1050;
   letter-spacing: 0.9px;
 }
@@ -43,6 +46,11 @@ body {
 .card__description {
   margin-block-start: $space-300;
 }
+
+// .card__description,
+// .card__list {
+//   color: $clr-charcoal-grey
+// }
 
 
 .card__list {
@@ -69,7 +77,7 @@ body {
 }
 
 
-.card__label,
+
 .card__input,
 .card__btn {
   display: block;
@@ -77,8 +85,15 @@ body {
 }
 
 
+
+.card__label-error {
+  display: flex;
+  justify-content: space-between;
+}
 .card__label {
+  // color: $clr-dark-slate-grey;
   font-size: $fs-200;
+  font-weight: $fw-bold;
   margin-block-end: $space-80;
 }
 
@@ -88,12 +103,37 @@ body {
   border-radius: 7px;
   margin-block-end: $space-700;
   cursor: pointer;
+  // appearance: none;
+  border: 1px solid $clr-grey;
+  color: $clr-grey;
+  opacity: 0.7;
+
 }
 
 .card__input:focus {
   outline: none;
+  border: 1px solid $clr-dark-slate-grey;
+  color: $clr-dark-slate-grey;
+  opacity: 1;
 }
 
+// .card__input:invalid {
+//   border: 2px solid $clr-tomato;
+// }
+
+.error-msg {
+  color: $clr-tomato;
+  font-size: $fs-200;
+  font-weight: $fw-bold;
+  // text-align: right;
+
+}
+
+.card__input.active {
+  color: $clr-dark-tomato;
+  border: 1px solid $clr-dark-tomato;
+  background-color: $clr-light-tomato;
+}
 
 
 .btn {

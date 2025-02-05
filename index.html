@@ -59,14 +59,18 @@
             <li class="card__list-item" role="listitem">And much more!</li>
           </ul>
 
-          <form id="form" class="card__form" action="">
+          <form id="form" class="card__form" action="" novalidate>
             <div class="card__form-group">
-              <label class="card__label" for="email"
-                ><strong>Email address</strong></label
-              >
 
-              <span id="invalid" class="card__error" role="alert" aria-live="assertive">
-              </span>
+              <div class="card__label-error">
+
+                <label class="card__label" for="email"
+                  >Email address</label
+                >
+                <span id="invalid" class="card__error" role="alert" aria-live="assertive">
+                </span>
+                
+              </div>
 
               <input
                 class="card__input"

@@ -1,11 +1,13 @@
 @use 'functions' as *;
 
-$clr-tomato: #ff6257;
+$clr-tomato: hsl(4, 100%, 67%);
 $clr-dark-slate-grey: hsl(234, 29%, 20%);
 $clr-charcoal-grey: hsl(235, 18%, 26%);
 $clr-grey: hsl(231, 7%, 60%);
 $clr-white: hsl(0, 0%, 100%);
 // $clr-red: hsl(0, 100%, 50%);
+$clr-light-tomato: hsl(4, 97%, 94%);
+$clr-dark-tomato: hsl(7, 80%, 40%);
 
 $ff-roboto: "Roboto", serif;
 
@@ -20,6 +22,7 @@ $fs-1050: pxToRem(38);
 
 
 $fw-normal: 400;
+$fw-medium: 500;
 $fw-bold: 700;
 
 $width-card-mobile: pxToRem(375);
