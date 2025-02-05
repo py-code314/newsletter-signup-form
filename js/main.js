@@ -1,17 +1,30 @@
-// console.log('it works');
+
+const card = document.querySelector('.card');
 const form = document.querySelector('.card__form');
 const email = document.querySelector('.card__input');
 const emailError = document.querySelector('.card__error');
 const dialog = document.querySelector('.card__success');
+const subscribeBtn = document.querySelector('.card__btn');
 
-form.addEventListener('submit', (event) => {
-  // const invalidInput = document.querySelector(':invalid');
+
+function checkValidity(event) {
+  event.preventDefault();
   if (!email.validity.valid) {
-    event.preventDefault();
-    showError()
-    email.focus()
-  } 
+    showError();
+    email.focus();
+  } else {
+    card.style.display = "none"
+    dialog.showModal();
+  }
   
+}
+
+form.addEventListener('submit', checkValidity)
+
+form.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    checkValidity
+  }
 })
 
 function showError() {
