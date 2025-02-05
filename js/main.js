@@ -2,9 +2,11 @@
 const card = document.querySelector('.card');
 const form = document.querySelector('.card__form');
 const email = document.querySelector('.card__input');
+
 const emailError = document.querySelector('.card__error');
 const dialog = document.querySelector('.card__success');
 const subscribeBtn = document.querySelector('.card__btn');
+const userEmail = document.querySelector('.card__email');
 
 
 function checkValidity(event) {
@@ -14,7 +16,9 @@ function checkValidity(event) {
     email.focus();
   } else {
     card.style.display = "none"
+    // console.log(email.value);
     dialog.showModal();
+    userEmail.textContent = email.value
   }
   
 }

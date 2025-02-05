@@ -30,7 +30,7 @@ body {
 
 
 .card__body {
-  padding: $space-900 $space-700;
+  padding: $space-1100 $space-700;
   color: $clr-dark-slate-grey;
 
 }
@@ -40,17 +40,13 @@ body {
   // color: $clr-dark-slate-grey;
   font-size: $fs-1050;
   letter-spacing: 0.9px;
+  line-height: 1.1;
 }
 
 
 .card__description {
-  margin-block-start: $space-300;
+  margin-block-start: $space-650;
 }
-
-// .card__description,
-// .card__list {
-//   color: $clr-charcoal-grey
-// }
 
 
 .card__list {
@@ -69,7 +65,7 @@ body {
   width: 23px;
   height: 23px;
   border-radius: 50%;
-  margin-inline-end: $space-300;
+  margin-inline-end: $space-350;
 }
 
 .card__list-item {
@@ -78,8 +74,7 @@ body {
 
 
 
-.card__input,
-.card__btn {
+.card__input {
   display: block;
   width: 100%;
 }
@@ -139,13 +134,17 @@ body {
 
 
 .btn {
+  display: block;
+  width: 100%;
   color: $clr-white;
   font-weight: $fw-bold;
   background: $clr-dark-slate-grey;
-  padding: $space-400;
+  padding: $space-450;
   border: transparent;
   border-radius: 7px;
   cursor: pointer;
+
+  
 }
 
 .btn:hover,
@@ -154,5 +153,35 @@ body {
   box-shadow: $shadow-md;
   outline: none;
 }
+
+
+.card__success {
+  // @include flex;
+  border: transparent;
+  // display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: steelblue;
+  max-width: 375px;
+  min-height: 100%;
+  padding: 148px 24px 40px;
+
+}
+
+
+.card__success-img {
+  margin-block-end: 40px;
+}
+
+.card__success-msg {
+  margin-block-start: 22px;
+  // margin-block-end: auto;
+}
+
+.card__success-btn {
+  margin-block-start: auto;
+}
+
+
 
 
