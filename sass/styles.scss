@@ -87,7 +87,13 @@ body {
   padding: $space-300 $space-650;
   border-radius: 7px;
   margin-block-end: $space-700;
+  cursor: pointer;
 }
+
+.card__input:focus {
+  outline: none;
+}
+
 
 
 .btn {
@@ -97,6 +103,14 @@ body {
   padding: $space-400;
   border: transparent;
   border-radius: 7px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: $clr-tomato;
+  box-shadow: $shadow-md;
+  outline: none;
 }
 
 
