@@ -130,9 +130,11 @@ body {
 }
 
 .card__input.active {
-  color: $clr-dark-tomato;
-  border: 1px solid $clr-dark-tomato;
-  background-color: $clr-light-tomato;
+  color: $clr-tomato;
+  // border: 1px solid $clr-dark-tomato;
+  border: 1px solid $clr-dark-red;
+  // background-color: $clr-light-tomato;
+  background-color: $clr-light-pink;
 }
 
 
