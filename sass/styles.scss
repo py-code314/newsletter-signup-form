@@ -1,19 +1,17 @@
-
 @use 'mixins' as *;
 @use 'reset' as *;
 @use 'variables' as *;
-
 
 body {
   @include flex;
 
   font-family: $ff-roboto;
+  padding: $space-400;
 
   @include tablet {
     background-color: $clr-charcoal-grey;
   }
 }
-
 
 .sr-only {
   position: absolute;
@@ -26,7 +24,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
 
 .card {
   max-width: $width-card-mobile;
@@ -42,14 +39,16 @@ body {
 }
 
 .card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: $radius-sm;
-  overflow: hidden;
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius-sm;
+    overflow: hidden;
+  }
 }
 .card__body {
-  padding: $space-1100 $space-700;
+  padding: $space-900 $space-700;
   color: $clr-dark-slate-grey;
 
   @include tablet {
@@ -58,9 +57,10 @@ body {
   }
 }
 
-
 .card__title {
   font-size: $fs-1050;
+  letter-spacing: 0.9px;
+  // margin-block: 8px;
 
   @include tablet {
     font-size: $fs-1500;
@@ -68,15 +68,13 @@ body {
   }
 }
 
-
 .card__description {
-  margin-block-start: $space-650;
+  margin-block-start: $space-300;
 
   @include tablet {
     margin-block-start: $space-100;
   }
 }
-
 
 .card__list {
   margin-block: $space-700 $space-1100;
@@ -84,10 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: $space-100;
-  
 }
-
-
 
 .card__list-item::before {
   content: url('../assets/images/icon-list.svg');
@@ -101,14 +96,10 @@ body {
   display: flex;
 }
 
-
-
 .card__input {
   display: block;
   width: 100%;
 }
-
-
 
 .card__label-error {
   display: flex;
@@ -120,7 +111,6 @@ body {
   margin-block-end: $space-80;
 }
 
-
 .card__input {
   padding: $space-300 $space-650;
   border-radius: $radius-xs;
@@ -129,7 +119,6 @@ body {
   border: 1px solid $clr-grey;
   color: $clr-grey;
   opacity: 0.7;
-
 }
 
 .card__input:focus {
@@ -138,7 +127,6 @@ body {
   color: $clr-dark-slate-grey;
   opacity: 1;
 }
-
 
 .error-msg {
   color: $clr-tomato;
@@ -151,7 +139,6 @@ body {
   border: 1px solid $clr-dark-red;
   background-color: $clr-light-pink;
 }
-
 
 .btn {
   display: block;
@@ -172,10 +159,9 @@ body {
   outline: none;
 }
 
-
 .success {
   border: transparent;
-  max-width: $width-card-mobile;
+  min-width: $width-card-mobile;
   height: unset;
   min-height: 100%;
   padding: $space-lg $space-700 $space-1100;
@@ -184,8 +170,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
 }
 
 .success__wrapper {
@@ -195,10 +179,6 @@ body {
   justify-content: space-between;
 }
 
-
-
-
-
 .success__title {
   font-size: $fs-1050;
   letter-spacing: 0.9px;
@@ -206,16 +186,3 @@ body {
   margin-block: $space-1100 $space-600;
   outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

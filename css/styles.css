@@ -57,6 +57,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Roboto", serif;
+  padding: 1rem;
 }
 @media (min-width: 48em) {
   body {
@@ -90,16 +91,18 @@ body {
   }
 }
 
-.card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0.625rem;
-  overflow: hidden;
+@media (min-width: 48em) {
+  .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    overflow: hidden;
+  }
 }
 
 .card__body {
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   color: hsl(234, 29%, 20%);
 }
 @media (min-width: 48em) {
@@ -111,6 +114,7 @@ body {
 
 .card__title {
   font-size: 2.375rem;
+  letter-spacing: 0.9px;
 }
 @media (min-width: 48em) {
   .card__title {
@@ -120,7 +124,7 @@ body {
 }
 
 .card__description {
-  margin-block-start: 1.375rem;
+  margin-block-start: 0.875rem;
 }
 @media (min-width: 48em) {
   .card__description {
@@ -214,7 +218,7 @@ body {
 
 .success {
   border: transparent;
-  max-width: 23.4375rem;
+  min-width: 23.4375rem;
   height: unset;
   min-height: 100%;
   padding: 9.25rem 1.5rem 2.5rem;
