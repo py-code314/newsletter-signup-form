@@ -19,6 +19,7 @@ $fs-500: pxToRem(18);
 $fs-600: pxToRem(20);
 $fs-700: pxToRem(24);
 $fs-1050: pxToRem(38);
+$fs-1500: pxToRem(56);
 
 
 $fw-normal: 400;
@@ -26,6 +27,7 @@ $fw-medium: 500;
 $fw-bold: 700;
 
 $width-card-mobile: pxToRem(375);
+$width-card-desktop: pxToRem(928);
 
 
 $space-80: pxToRem(8);
@@ -42,7 +44,16 @@ $space-700: pxToRem(24);
 $space-800: pxToRem(28);
 $space-850: pxToRem(30);
 $space-900: pxToRem(32);
+// $space-1000: pxToRem(36);
 $space-1100: pxToRem(40);
+// $space-1350: pxToRem(50);
+// $space-1500: pxToRem(56);
+$space-1600: pxToRem(60);
+$space-1650: pxToRem(62);
+$space-lg: pxToRem(148);
 
 $shadow-md: 8px 20px 13px 3px hsla(4, 100%, 67%, 0.14), -8px 20px 13px 3px hsla(4, 100%, 67%, 0.14);
 // $clr: hsla(4, 100%, 67%, 0.2);
+$radius-xs: pxToRem(7);
+$radius-sm: pxToRem(10);
+$radius-lg: pxToRem(36);
