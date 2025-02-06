@@ -4,9 +4,9 @@ const form = document.querySelector('.card__form');
 const email = document.querySelector('.card__input');
 
 const emailError = document.querySelector('.card__error');
-const dialog = document.querySelector('.card__success');
+const dialog = document.querySelector('.success');
 const subscribeBtn = document.querySelector('.card__btn');
-const userEmail = document.querySelector('.card__email');
+const userEmail = document.querySelector('.success__email');
 
 
 function checkValidity(event) {

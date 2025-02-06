@@ -39,8 +39,8 @@ body {
 .card__title {
   // color: $clr-dark-slate-grey;
   font-size: $fs-1050;
-  letter-spacing: 0.9px;
-  line-height: 1.1;
+  // letter-spacing: 0.9px;
+  // line-height: 1.1;
 }
 
 
@@ -155,32 +155,51 @@ body {
 }
 
 
-.card__success {
-  // @include flex;
+.success {
   border: transparent;
-  // display: flex;
-  flex-direction: column;
-  align-items: start;
-  background-color: steelblue;
+  // background-color: steelblue;
   max-width: 375px;
-  min-height: 100%;
+  height: unset;
+  min-height: 812px;
   padding: 148px 24px 40px;
 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.success__wrapper {
+  // background-color: hotpink;
+  min-height: 100%;
+  // min-height: calc(100% - 188px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
-.card__success-img {
-  margin-block-end: 40px;
+
+
+
+.success__title {
+  font-size: $fs-1050;
+  letter-spacing: 0.9px;
+  line-height: 1.1;
+  margin-block: 40px 20px;
+  outline: none;
 }
 
-.card__success-msg {
-  margin-block-start: 22px;
-  // margin-block-end: auto;
-}
 
-.card__success-btn {
-  margin-block-start: auto;
-}
+
+
+
+
+
+
+
 
 
 

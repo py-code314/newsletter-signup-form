@@ -61,15 +61,14 @@
 
           <form id="form" class="card__form" novalidate>
             <div class="card__form-group">
-
               <div class="card__label-error">
-
-                <label class="card__label" for="email"
-                  >Email address</label
-                >
-                <span id="invalid" class="card__error" role="alert" aria-live="assertive">
+                <label class="card__label" for="email">Email address</label>
+                <span
+                  id="invalid"
+                  class="card__error"
+                  role="alert"
+                  aria-live="assertive">
                 </span>
-                
               </div>
 
               <input
@@ -81,12 +80,15 @@
                 placeholder="email@company.com"
                 required
                 aria-describedby="invalid"
-                aria-required="true"
-                 />
+                aria-required="true" />
             </div>
 
-            <button id="card__btn" class="card__btn btn btn--active" type="submit"
-            aria-controls="success-dialog" aria-label="Show Success Message">
+            <button
+              id="card__btn"
+              class="card__btn btn btn--active"
+              type="submit"
+              aria-controls="success-dialog"
+              aria-label="Show Success Message">
               Subscribe to monthly newsletter
             </button>
           </form>
@@ -95,24 +97,33 @@
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <dialog id="success-dialog" class="card__success" aria-label="Success Message">
-
-        <img
-          class="card__success-img"
-          src="./assets/images/icon-success.svg"
-          alt="" />
-
-        <h2 class="card__title" autofocus tabindex="-1">Thanks for subscribing!</h2>
-
-        <p class="card__success-msg">
-          A confirmation email has been sent to
-          <span id="card__email" class="card__email"></span>. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
-
-        <button id="success-btn" class="card__success-btn btn btn--active" type="button" aria-labelledby="success-btn">
-          Dismiss message
-        </button>
+      <dialog
+        id="success-dialog"
+        class="success"
+        aria-label="Success Message">
+        <div class="success__wrapper">
+          <div class="success__content">
+            <img
+              class="success__img"
+              src="./assets/images/icon-success.svg"
+              alt="" />
+            <h2 class="success__title" autofocus tabindex="-1">
+              Thanks for subscribing!
+            </h2>
+            <p class="success__msg">
+              A confirmation email has been sent to
+              <span id="success__email" class="success__email"></span>. Please open it and
+              click the button inside to confirm your subscription.
+            </p>
+          </div> 
+          <button
+            id="success-btn"
+            class="success__btn btn btn--active"
+            type="button"
+            aria-labelledby="success-btn">
+            Dismiss message
+          </button>
+        </div>
       </dialog>
     </main>
 
