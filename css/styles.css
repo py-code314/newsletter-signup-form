@@ -211,7 +211,7 @@ body {
 
 .btn:hover,
 .btn:focus {
-  background-color: hsl(4, 100%, 67%);
+  background: linear-gradient(to right, hsl(345, 76%, 62%), hsl(4, 100%, 67%));
   box-shadow: 8px 20px 13px 3px hsla(4, 100%, 67%, 0.14), -8px 20px 13px 3px hsla(4, 100%, 67%, 0.14);
   outline: none;
 }

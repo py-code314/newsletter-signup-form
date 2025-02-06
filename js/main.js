@@ -7,6 +7,7 @@ const emailError = document.querySelector('.card__error');
 const dialog = document.querySelector('.success');
 const subscribeBtn = document.querySelector('.card__btn');
 const userEmail = document.querySelector('.success__email');
+const dismissBtn = document.querySelector('.success__btn');
 
 
 function checkValidity(event) {
@@ -19,6 +20,8 @@ function checkValidity(event) {
     // console.log(email.value);
     dialog.showModal();
     userEmail.textContent = email.value
+    userEmail.style.fontWeight = '700'
+    email.value = ""
   }
   
 }
@@ -42,3 +45,13 @@ function showError() {
 }
 
 
+function dismissMsg() {
+  dialog.close()
+  if (window.innerWidth < 786) {
+    card.style.display = 'block'
+  } else {
+    card.style.display = 'flex';
+  }
+  
+}
+dismissBtn.addEventListener('click', dismissMsg)
