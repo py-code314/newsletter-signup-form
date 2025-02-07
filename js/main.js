@@ -1,4 +1,3 @@
-
 const card = document.querySelector('.card');
 const form = document.querySelector('.card__form');
 const email = document.querySelector('.card__input');
@@ -9,49 +8,66 @@ const subscribeBtn = document.querySelector('.card__btn');
 const userEmail = document.querySelector('.success__email');
 const dismissBtn = document.querySelector('.success__btn');
 
+function validateEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailRegex.test(email) 
+  } 
 
 function checkValidity(event) {
   event.preventDefault();
-  if (!email.validity.valid) {
+  const isValid = validateEmail(email.value)
+  if (!email.validity.valid || isValid === false) {
     showError();
     email.focus();
   } else {
-    card.style.display = "none"
-    // console.log(email.value);
+    card.style.display = 'none';
     dialog.showModal();
-    userEmail.textContent = email.value
-    userEmail.style.fontWeight = '700'
-    email.value = ""
+    userEmail.textContent = email.value;
+    userEmail.style.fontWeight = '700';
+    email.value = '';
   }
-  
 }
 
-form.addEventListener('submit', checkValidity)
+form.addEventListener('submit', checkValidity);
 
 form.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
-    checkValidity
+    checkValidity;
   }
-})
+});
 
 function showError() {
   if (email.validity.valueMissing) {
-    emailError.textContent = "Enter your email address"
+    emailError.textContent = 'Enter your email address';
   } else if (email.validity.typeMismatch) {
-    emailError.textContent = "Valid email required"
+    emailError.textContent = 'Valid email required';
+  } else {
+    emailError.textContent = "Email pattern doesn't match"
   }
-  emailError.className = "error-msg"
-  email.className = "card__input active"
+  emailError.className = 'error-msg';
+  email.className = 'card__input active';
 }
 
-
-function dismissMsg() {
-  dialog.close()
+function showForm() {
   if (window.innerWidth < 786) {
-    card.style.display = 'block'
+    card.style.display = 'block';
   } else {
     card.style.display = 'flex';
   }
-  
 }
-dismissBtn.addEventListener('click', dismissMsg)
+
+function dismissMsg() {
+  dialog.close();
+  
+  showForm()
+}
+dismissBtn.addEventListener('click', dismissMsg);
+
+dialog.addEventListener('close', (event) => {
+  console.log(event.target.returnValue);
+  if (event.target.returnValue === '') {
+    
+    showForm();
+  }
+}
+)
