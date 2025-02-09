@@ -1,5 +1,6 @@
 @use 'functions' as *;
 
+
 $clr-tomato: hsl(4, 100%, 67%);
 $clr-tomato-dark: hsl(345, 76%, 62%);
 $clr-dark-slate-grey: hsl(234, 29%, 20%);
@@ -26,6 +27,7 @@ $fs-1500: pxToRem(56);
 $fw-normal: 400;
 $fw-medium: 500;
 $fw-bold: 700;
+
 
 $width-card-mobile: pxToRem(375);
 $width-card-desktop: pxToRem(928);

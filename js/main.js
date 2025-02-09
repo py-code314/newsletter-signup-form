@@ -25,6 +25,9 @@ function checkValidity(event) {
     userEmail.textContent = email.value;
     userEmail.style.fontWeight = '700';
     email.value = '';
+    emailError.textContent = '';
+    emailError.classList.remove('error-msg');
+    email.classList.remove('active');
   }
 }
 
