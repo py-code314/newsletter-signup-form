@@ -83,11 +83,12 @@
                 aria-describedby="invalid"
                 aria-required="true" />
             </div>
-
+            <!-- Add tabindex for Safari -->
             <button
               id="card__btn"
               class="card__btn btn btn--active"
-              type="submit"
+              type="submit"         
+              tabindex="0" 
               aria-controls="success-dialog"
               aria-label="Show Success Message">
               Subscribe to monthly newsletter
