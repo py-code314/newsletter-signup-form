@@ -223,7 +223,8 @@ body {
 
 .success {
   border: transparent;
-  min-width: 23.4375rem;
+  max-width: 23.4375rem;
+  width: 100%;
   height: unset;
   min-height: 100%;
   padding: 9.25rem 1.5rem 2.5rem;

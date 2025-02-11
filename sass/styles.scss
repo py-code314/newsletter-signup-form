@@ -185,7 +185,9 @@ body {
 
 .success {
   border: transparent;
-  min-width: $width-card-mobile;
+  max-width: $width-card-mobile;
+  // min-width: 320px;
+  width: 100%;
   height: unset;
   min-height: 100%;
   padding: $space-lg $space-700 $space-1100;
@@ -194,6 +196,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  // -webkit-transform: translate(-50%, -50%);
 
   @include tablet {
     // background-color: steelblue;
