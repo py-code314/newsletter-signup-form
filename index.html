@@ -117,11 +117,13 @@
               <span id="success__email" class="success__email"></span>. Please open it and
               click the button inside to confirm your subscription.
             </p>
-          </div> 
+          </div>
+          <!-- Add tabindex for Safari --> 
           <button
             id="success-btn"
             class="success__btn btn btn--active"
             type="button"
+            tabindex="0"
             aria-labelledby="success-btn">
             Dismiss message
           </button>
