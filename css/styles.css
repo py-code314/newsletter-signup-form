@@ -263,3 +263,11 @@ body {
     margin-block: 2.5rem 1.5rem;
   }
 }
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}

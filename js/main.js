@@ -8,36 +8,25 @@ const subscribeBtn = document.querySelector('.card__btn');
 const userEmail = document.querySelector('.success__email');
 const dismissBtn = document.querySelector('.success__btn');
 
-function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  return emailRegex.test(email) 
-  } 
+
 
 function checkValidity(event) {
   event.preventDefault();
-  const isValid = validateEmail(email.value)
+  const isValid = validateEmail(email.value);
   if (!email.validity.valid || isValid === false) {
     showError();
     email.focus();
   } else {
-    card.style.display = 'none';
-    dialog.showModal();
-    userEmail.textContent = email.value;
-    userEmail.style.fontWeight = '700';
-    email.value = '';
-    emailError.textContent = '';
-    emailError.classList.remove('error-msg');
-    email.classList.remove('active');
+    showDialog()
   }
 }
 
-form.addEventListener('submit', checkValidity);
 
-form.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    checkValidity;
-  }
-});
+function validateEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailRegex.test(email);
+}
+
 
 function showError() {
   if (email.validity.valueMissing) {
@@ -45,32 +34,59 @@ function showError() {
   } else if (email.validity.typeMismatch) {
     emailError.textContent = 'Valid email required';
   } else {
-    emailError.textContent = "Email pattern doesn't match"
+    emailError.textContent = "Email pattern doesn't match";
   }
   emailError.className = 'error-msg';
   email.className = 'card__input active';
 }
 
-function showForm() {
-  if (window.innerWidth < 786) {
-    card.style.display = 'block';
-  } else {
-    card.style.display = 'flex';
-  }
+
+function showDialog() {
+  card.classList.add('hidden');
+  card.classList.remove('visible');
+  dialog.showModal();
+  userEmail.textContent = email.value;
+  userEmail.style.fontWeight = '700';
+  resetForm();
 }
+
+function resetForm() {
+  email.value = '';
+  emailError.textContent = '';
+  emailError.classList.remove('error-msg');
+  email.classList.remove('active');
+}
+
+
 
 function dismissMsg() {
+  // console.log('close dialog');
   dialog.close();
-  
-  showForm()
+  // console.log('show form');
+  showForm();
 }
+
+
+function showForm() {
+  card.classList.add('visible');
+  card.classList.remove('hidden');
+}
+
+
+form.addEventListener('submit', checkValidity);
+
+form.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    checkValidity(event);
+  }
+});
+
+
 dismissBtn.addEventListener('click', dismissMsg);
 
-dialog.addEventListener('close', (event) => {
-  console.log(event.target.returnValue);
-  if (event.target.returnValue === '') {
-    
-    showForm();
+dialog.addEventListener('keydown', (event) => {
+  // console.log(event.key);
+  if (event.key === 'Escape') {
+    dismissMsg()
   }
-}
-)
+})

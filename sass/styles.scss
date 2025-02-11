@@ -27,7 +27,6 @@ body {
 
 .card {
   max-width: $width-card-mobile;
-  // display: block;
 
   @include tablet {
     background-color: $clr-white;
@@ -38,6 +37,26 @@ body {
     border-radius: $radius-lg;
   }
 }
+
+// .card--mobile {
+//   // display: block;
+//   @include mobile {
+//     max-width: $width-card-mobile;
+//     display: block;
+//   }
+  
+// }
+
+// .card--tablet {
+//   @include tablet {
+//     background-color: $clr-white;
+//     max-width: $width-card-desktop;
+//     display: flex;
+//     flex-direction: row-reverse;
+//     padding: $space-700;
+//     border-radius: $radius-lg;
+//   }
+// }
 
 .card__img {
   width: 100%;
@@ -205,4 +224,12 @@ body {
     line-height: 1;
     margin-block: $space-1100 $space-700;
   }
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
