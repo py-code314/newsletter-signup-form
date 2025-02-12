@@ -130,6 +130,7 @@ body {
 
 /* Styles for list items */
 .card__list {
+  list-style: none;
   margin-block: 1.5rem 2.5rem;
   padding-inline-start: 0;
   display: flex;
@@ -236,10 +237,10 @@ body {
 }
 @media (min-width: 48em) {
   .success {
-    max-width: 504px;
-    min-height: 520px;
+    max-width: 31.5rem;
+    min-height: 32.5rem;
     border-radius: 2.25rem;
-    padding: 47px 64px 64px 64px;
+    padding: 2.9375rem 4rem 4rem;
   }
 }
 

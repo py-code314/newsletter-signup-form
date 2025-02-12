@@ -54,6 +54,7 @@
           </p>
 
           <!-- Card list -->
+          <!-- Use role="list" and role="listitem" to make the list accessible to screen readers and Safari when list-style: none applied -->
           <ul class="card__list" role="list">
             <li class="card__list-item" role="listitem">
               Product discovery and building what matters
@@ -106,7 +107,7 @@
       </section>
 
       <!-- Success message -->
-      <dialog id="success-dialog" class="success" aria-label="Success Message">
+      <dialog id="success-dialog" class="success" aria-labelledby="success-title">
         <div class="success__wrapper">
           <!-- Wrap all elements except button in a container to push button to bottom -->
           <div class="success__content">
@@ -114,7 +115,7 @@
               class="success__img"
               src="./assets/images/icon-success.svg"
               alt="" />
-            <h2 class="success__title" autofocus tabindex="-1">
+            <h2 id="success-title" class="success__title"  tabindex="-1">
               Thanks for subscribing!
             </h2>
             <p class="success__msg">
