@@ -226,7 +226,7 @@ body {
 }
 
 
-/* Wrapper takes up the entire height of the success dialog */
+/* Wrapper takes up the entire height of the success dialog. Apply flex to separate content from button */
 .success__wrapper {
   min-height: 100%;
   display: flex;
