@@ -8,7 +8,6 @@ const userEmail = document.querySelector('.success__email');
 const dismissBtn = document.querySelector('.success__btn');
 
 
-
 /* Validate the email input of the form */
 function checkValidity(event) {
   event.preventDefault();
@@ -41,6 +40,7 @@ function showError() {
   } else if (!validateEmail(email.value)) {
     emailError.textContent = "Email pattern doesn't match";
   }
+
   // Add error styles to the error message and email input
   emailError.className = 'error-msg';
   email.className = 'card__input active';
@@ -55,7 +55,6 @@ function showSuccessDialog() {
   userEmail.style.fontWeight = '700';
   resetForm();
 }
-
 
 
 /* Hide the form */
@@ -74,9 +73,7 @@ function resetForm() {
 }
 
 
-
 /* Close Success dialog and displays the form again */
-
 function dismissMsg() {
   dialog.close();
   showForm();
@@ -91,7 +88,6 @@ function showForm() {
 
 
 /* Event listeners */
-
 form.addEventListener('submit', checkValidity);
 
 form.addEventListener('keydown', (event) => {

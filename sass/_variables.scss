@@ -1,18 +1,23 @@
+// Import Partials
 @use 'functions' as *;
 
 
+// Colors
 $clr-tomato: hsl(4, 100%, 67%);
 $clr-tomato-dark: hsl(345, 76%, 62%);
 $clr-dark-slate-grey: hsl(234, 29%, 20%);
 $clr-charcoal-grey: hsl(235, 18%, 26%);
 $clr-grey: hsl(231, 7%, 60%);
 $clr-white: hsl(0, 0%, 100%);
-// $clr-red: hsl(0, 100%, 50%);
 $clr-light-pink: hsl(0, 100%, 93%);
 $clr-dark-red: hsl(0, 100%, 30%);
 
+
+// Font Family
 $ff-roboto: "Roboto", serif;
 
+
+// Font Sizes
 $fs-200: pxToRem(12);
 $fs-250: pxToRem(13);
 $fs-300: pxToRem(14);
@@ -24,15 +29,18 @@ $fs-1050: pxToRem(38);
 $fs-1500: pxToRem(56);
 
 
+// Font Weights
 $fw-normal: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
 
+// Card Widths
 $width-card-mobile: pxToRem(375);
 $width-card-desktop: pxToRem(928);
 
 
+// Spacing
 $space-80: pxToRem(8);
 $space-100: pxToRem(10);
 $space-200: pxToRem(12);
@@ -47,16 +55,15 @@ $space-700: pxToRem(24);
 $space-800: pxToRem(28);
 $space-850: pxToRem(30);
 $space-900: pxToRem(32);
-// $space-1000: pxToRem(36);
 $space-1100: pxToRem(40);
-// $space-1350: pxToRem(50);
-// $space-1500: pxToRem(56);
 $space-1600: pxToRem(60);
 $space-1650: pxToRem(62);
 $space-lg: pxToRem(148);
 
+
+
+// Utilities
 $shadow-md: 8px 20px 13px 3px hsla(4, 100%, 67%, 0.14), -8px 20px 13px 3px hsla(4, 100%, 67%, 0.14);
-// $clr: hsla(4, 100%, 67%, 0.2);
 $radius-xs: pxToRem(7);
 $radius-sm: pxToRem(10);
 $radius-lg: pxToRem(36);

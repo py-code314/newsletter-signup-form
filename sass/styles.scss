@@ -1,7 +1,10 @@
+// Import Partials
 @use 'mixins' as *;
 @use 'reset' as *;
 @use 'variables' as *;
 
+
+/* Styles for the whole page */
 body {
   @include flex;
 
@@ -13,6 +16,8 @@ body {
   }
 }
 
+
+/* Hidden Page Title */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -25,9 +30,12 @@ body {
   border: 0;
 }
 
+
+/* Styles for the Card */
 .card {
   max-width: $width-card-mobile;
 
+  // Place card image on the right side
   @include tablet {
     background-color: $clr-white;
     max-width: $width-card-desktop;
@@ -38,30 +46,13 @@ body {
   }
 }
 
-// .card--mobile {
-//   // display: block;
-//   @include mobile {
-//     max-width: $width-card-mobile;
-//     display: block;
-//   }
-  
-// }
 
-// .card--tablet {
-//   @include tablet {
-//     background-color: $clr-white;
-//     max-width: $width-card-desktop;
-//     display: flex;
-//     flex-direction: row-reverse;
-//     padding: $space-700;
-//     border-radius: $radius-lg;
-//   }
-// }
-
+/* Styles for the Card Image */
 .card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
   @include tablet {
     width: 100%;
     height: 100%;
@@ -70,6 +61,9 @@ body {
     overflow: hidden;
   }
 }
+
+
+/* Styles for the Card Body */
 .card__body {
   padding: $space-900 $space-700;
   color: $clr-dark-slate-grey;
@@ -80,10 +74,11 @@ body {
   }
 }
 
+
+/* Styles for Card Title */
 .card__title {
   font-size: $fs-1050;
   letter-spacing: 0.9px;
-  // margin-block: 8px;
 
   @include tablet {
     font-size: $fs-1500;
@@ -91,6 +86,8 @@ body {
   }
 }
 
+
+/* Styles for Card Description */
 .card__description {
   margin-block-start: $space-300;
 
@@ -99,6 +96,8 @@ body {
   }
 }
 
+
+/* Styles for list items */
 .card__list {
   margin-block: $space-700 $space-1100;
   padding-inline-start: 0;
@@ -107,6 +106,8 @@ body {
   gap: $space-100;
 }
 
+
+/* Pseudo element for list item icons */
 .card__list-item::before {
   content: url('../assets/images/icon-list.svg');
   width: 23px;
@@ -115,25 +116,34 @@ body {
   margin-inline-end: $space-350;
 }
 
+
 .card__list-item {
   display: flex;
 }
 
+
+/* Styles for the form */
 .card__input {
   display: block;
   width: 100%;
 }
 
+
+/* Create space between label and error message */
 .card__label-error {
   display: flex;
   justify-content: space-between;
 }
+
+
 .card__label {
   font-size: $fs-200;
   font-weight: $fw-bold;
   margin-block-end: $space-80;
 }
 
+
+/* Styles for the email input field */
 .card__input {
   padding: $space-300 $space-650;
   border-radius: $radius-xs;
@@ -144,6 +154,7 @@ body {
   opacity: 0.7;
 }
 
+
 .card__input:focus {
   outline: none;
   border: 1px solid $clr-dark-slate-grey;
@@ -151,18 +162,24 @@ body {
   opacity: 1;
 }
 
+
+/* Styles for error message */
 .error-msg {
   color: $clr-tomato;
   font-size: $fs-200;
   font-weight: $fw-bold;
 }
 
+
+/* Styles for input field with invalid email */
 .card__input.active {
   color: $clr-tomato;
   border: 1px solid $clr-dark-red;
   background-color: $clr-light-pink;
 }
 
+
+/* Styles for the submit button */
 .btn {
   display: block;
   width: 100%;
@@ -175,31 +192,32 @@ body {
   cursor: pointer;
 }
 
+
+/* Styles for the submit button on hover and focus */
 .btn:hover,
 .btn:focus {
-  // background-color: $clr-tomato;
   background: linear-gradient(to right, $clr-tomato-dark, $clr-tomato);
   box-shadow: $shadow-md;
   outline: none;
 }
 
+
+/* Styles for the success dialog */
 .success {
   border: transparent;
   max-width: $width-card-mobile;
-  // min-width: 320px;
-  width: 100%;
-  height: unset;
-  min-height: 100%;
+  width: 100%; // Card occupies the whole width of viewport on small screens
+  height: unset; // Override the default height of dialog element
+  min-height: 100%; // Card occupies the whole height of viewport
   padding: $space-lg $space-700 $space-1100;
 
+  // Place success dialog in the center
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // -webkit-transform: translate(-50%, -50%);
 
   @include tablet {
-    // background-color: steelblue;
     max-width: 504px;
     min-height: 520px;
     border-radius: $radius-lg;
@@ -207,6 +225,8 @@ body {
   }
 }
 
+
+/* Wrapper takes up the entire height of the success dialog */
 .success__wrapper {
   min-height: 100%;
   display: flex;
@@ -214,6 +234,8 @@ body {
   justify-content: space-between;
 }
 
+
+/* Styles for the success dialog title */
 .success__title {
   font-size: $fs-1050;
   letter-spacing: 0.9px;
@@ -229,9 +251,11 @@ body {
   }
 }
 
+
 .visible {
   visibility: visible;
 }
+
 
 .hidden {
   visibility: hidden;
