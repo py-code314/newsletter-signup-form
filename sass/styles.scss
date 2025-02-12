@@ -3,7 +3,6 @@
 @use 'reset' as *;
 @use 'variables' as *;
 
-
 /* Styles for the whole page */
 body {
   @include flex;
@@ -15,7 +14,6 @@ body {
     background-color: $clr-charcoal-grey;
   }
 }
-
 
 /* Hidden Page Title */
 .sr-only {
@@ -29,7 +27,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
 
 /* Styles for the Card */
 .card {
@@ -46,7 +43,6 @@ body {
   }
 }
 
-
 /* Styles for the Card Image */
 .card__img {
   width: 100%;
@@ -62,7 +58,6 @@ body {
   }
 }
 
-
 /* Styles for the Card Body */
 .card__body {
   padding: $space-900 $space-700;
@@ -73,7 +68,6 @@ body {
     padding: $space-1600 $space-1650 $space-850 $space-1100;
   }
 }
-
 
 /* Styles for Card Title */
 .card__title {
@@ -86,7 +80,6 @@ body {
   }
 }
 
-
 /* Styles for Card Description */
 .card__description {
   margin-block-start: $space-300;
@@ -95,7 +88,6 @@ body {
     margin-block-start: $space-100;
   }
 }
-
 
 /* Styles for list items */
 .card__list {
@@ -106,7 +98,6 @@ body {
   gap: $space-100;
 }
 
-
 /* Pseudo element for list item icons */
 .card__list-item::before {
   content: url('../assets/images/icon-list.svg');
@@ -116,11 +107,9 @@ body {
   margin-inline-end: $space-350;
 }
 
-
 .card__list-item {
   display: flex;
 }
-
 
 /* Styles for the form */
 .card__input {
@@ -128,20 +117,17 @@ body {
   width: 100%;
 }
 
-
 /* Create space between label and error message */
 .card__label-error {
   display: flex;
   justify-content: space-between;
 }
 
-
 .card__label {
   font-size: $fs-200;
   font-weight: $fw-bold;
   margin-block-end: $space-80;
 }
-
 
 /* Styles for the email input field */
 .card__input {
@@ -154,14 +140,12 @@ body {
   opacity: 0.7;
 }
 
-
 .card__input:focus {
   outline: none;
   border: 1px solid $clr-dark-slate-grey;
   color: $clr-dark-slate-grey;
   opacity: 1;
 }
-
 
 /* Styles for error message */
 .error-msg {
@@ -170,14 +154,12 @@ body {
   font-weight: $fw-bold;
 }
 
-
 /* Styles for input field with invalid email */
 .card__input.active {
   color: $clr-tomato;
   border: 1px solid $clr-dark-red;
   background-color: $clr-light-pink;
 }
-
 
 /* Styles for the submit button */
 .btn {
@@ -192,7 +174,6 @@ body {
   cursor: pointer;
 }
 
-
 /* Styles for the submit button on hover and focus */
 .btn:hover,
 .btn:focus {
@@ -200,7 +181,6 @@ body {
   box-shadow: $shadow-md;
   outline: none;
 }
-
 
 /* Styles for the success dialog */
 .success {
@@ -225,7 +205,6 @@ body {
   }
 }
 
-
 /* Wrapper takes up the entire height of the success dialog. Apply flex to separate content from button */
 .success__wrapper {
   min-height: 100%;
@@ -233,7 +212,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 /* Styles for the success dialog title */
 .success__title {
@@ -251,11 +229,9 @@ body {
   }
 }
 
-
 .visible {
   visibility: visible;
 }
-
 
 .hidden {
   visibility: hidden;

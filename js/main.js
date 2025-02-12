@@ -7,7 +7,6 @@ const dialog = document.querySelector('.success');
 const userEmail = document.querySelector('.success__email');
 const dismissBtn = document.querySelector('.success__btn');
 
-
 /* Validate the email input of the form */
 function checkValidity(event) {
   event.preventDefault();
@@ -23,13 +22,11 @@ function checkValidity(event) {
   }
 }
 
-
 /* Validate a given email address against an email pattern */
 function validateEmail(emailAddress) {
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(emailAddress);
 }
-
 
 /* Display an error message for invalid email input */
 function showError() {
@@ -46,7 +43,6 @@ function showError() {
   email.className = 'card__input active';
 }
 
-
 /* Display Success dialog and hide the form after a valid email address has been entered */
 function showSuccessDialog() {
   hideForm();
@@ -56,13 +52,11 @@ function showSuccessDialog() {
   resetForm();
 }
 
-
 /* Hide the form */
 function hideForm() {
   card.classList.add('hidden');
   card.classList.remove('visible');
 }
-
 
 /* Reset the form to its original state */
 function resetForm() {
@@ -72,20 +66,17 @@ function resetForm() {
   email.classList.remove('active');
 }
 
-
 /* Close Success dialog and displays the form again */
 function dismissMsg() {
   dialog.close();
   showForm();
 }
 
-
 /* Display the form */
 function showForm() {
   card.classList.add('visible');
   card.classList.remove('hidden');
 }
-
 
 /* Event listeners */
 form.addEventListener('submit', checkValidity);
@@ -100,6 +91,6 @@ dismissBtn.addEventListener('click', dismissMsg);
 
 dialog.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    dismissMsg()
+    dismissMsg();
   }
-})
+});

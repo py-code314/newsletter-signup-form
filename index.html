@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -24,19 +22,15 @@
       rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/styles.css" />
-
   </head>
 
   <body>
-
     <main>
-
       <!-- Accessible title -->
       <h1 class="sr-only">Newsletter Sign-up Form</h1>
 
       <!-- Card -->
       <section class="card visible">
-
         <!-- Card Image -->
         <picture class="card__img-container">
           <source
@@ -52,7 +46,6 @@
 
         <!-- Card content -->
         <div class="card__body">
-
           <!-- Card title and description -->
           <h2 class="card__title" tabindex="-1">Stay updated!</h2>
 
@@ -73,9 +66,7 @@
 
           <!-- Sign-up form -->
           <form id="form" class="card__form" novalidate>
-
             <div class="card__form-group">
-
               <!-- Wrap label and error message in a container to apply flex-->
               <div class="card__label-error">
                 <label class="card__label" for="email">Email address</label>
@@ -105,26 +96,18 @@
             <button
               id="card__btn"
               class="card__btn btn btn--active"
-              type="submit"         
-              tabindex="0" 
+              type="submit"
+              tabindex="0"
               aria-controls="success-dialog">
               Subscribe to monthly newsletter
             </button>
-
           </form>
-
         </div>
-
       </section>
 
       <!-- Success message -->
-      <dialog
-        id="success-dialog"
-        class="success"
-        aria-label="Success Message">
-
+      <dialog id="success-dialog" class="success" aria-label="Success Message">
         <div class="success__wrapper">
-
           <!-- Wrap all elements except button in a container to push button to bottom -->
           <div class="success__content">
             <img
@@ -136,12 +119,12 @@
             </h2>
             <p class="success__msg">
               A confirmation email has been sent to
-              <span id="success__email" class="success__email"></span>. Please open it and
-              click the button inside to confirm your subscription.
+              <span id="success__email" class="success__email"></span>. Please
+              open it and click the button inside to confirm your subscription.
             </p>
           </div>
 
-          <!-- Add tabindex for Safari --> 
+          <!-- Add tabindex for Safari -->
           <button
             id="success-btn"
             class="success__btn btn btn--active"
@@ -150,15 +133,10 @@
             aria-label="Dismiss message">
             Dismiss message
           </button>
-
         </div>
-
       </dialog>
-
     </main>
 
     <script src="./js/main.js"></script>
-
   </body>
-  
 </html>
