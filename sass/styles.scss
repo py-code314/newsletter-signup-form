@@ -198,10 +198,10 @@ body {
   transform: translate(-50%, -50%);
 
   @include tablet {
-    max-width: 504px;
-    min-height: 520px;
+    max-width: $width-dialog-desktop;
+    min-height: $height-dialog-desktop;
     border-radius: $radius-lg;
-    padding: 47px 64px 64px 64px;
+    padding: $space-1275 $space-1700 $space-1700;
   }
 }
 
